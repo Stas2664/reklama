@@ -1,0 +1,118 @@
+/* Additional custom styles for the website */
+
+:root {
+  --brand-blue: #3B82F6;
+  --gray-light: #F8FAFC;
+}
+
+.brand-blue {
+  color: var(--brand-blue);
+}
+
+.bg-brand-blue {
+  background-color: var(--brand-blue);
+}
+
+.bg-gray-light {
+  background-color: var(--gray-light);
+}
+
+.border-brand-blue {
+  border-color: var(--brand-blue);
+}
+
+.hover\:bg-brand-blue:hover {
+  background-color: var(--brand-blue);
+}
+
+.hover\:text-brand-blue:hover {
+  color: var(--brand-blue);
+}
+
+.focus\:ring-brand-blue:focus {
+  --tw-ring-color: var(--brand-blue);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile menu animations */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Form animations */
+.form-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* Hover effects */
+.hover-lift:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Modal animations */
+#call-modal {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#call-modal > div {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .lg\:py-32 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sticky, .fixed {
+    position: static !important;
+  }
+  
+  .shadow-lg, .shadow-xl, .shadow-2xl {
+    box-shadow: none !important;
+  }
+  
+  .bg-blue-500, .bg-blue-600 {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+}
